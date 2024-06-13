@@ -1,0 +1,10 @@
+.navbar-container {
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--clr-nav-bg);
+}
+.content-container {
+  width: calc(100vw - var(--nav-width));
+  height: 100vh;
+  background-color: var(--clr-content-bg);
+}

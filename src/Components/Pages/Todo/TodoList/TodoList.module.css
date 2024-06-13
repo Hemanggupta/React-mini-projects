@@ -1,0 +1,19 @@
+.todo-list {
+  text-align: left;
+}
+
+.todo-list-item {
+  display: flex;
+  justify-content: space-between;
+  word-break: break-all;
+  border: none;
+  background-color: #fdfffc;
+}
+.action-btns {
+  flex: 1;
+}
+
+.action-btns em {
+  font-size: 20px;
+  margin: 0 10px;
+}
