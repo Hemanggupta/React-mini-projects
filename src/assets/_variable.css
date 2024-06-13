@@ -1,9 +1,7 @@
 :root {
   --clr-logo: #ff0060;
   --nav-width: 280px;
-  --clr-nav-bg: #f6f6f9;
   --clr-nav: #778da9;
-  --clr-content-bg: #f6f6f9;
   --clr-intro-bg: #ffffff;
   --transition: 0.3s all ease;
   --card-border-radius: 15px;

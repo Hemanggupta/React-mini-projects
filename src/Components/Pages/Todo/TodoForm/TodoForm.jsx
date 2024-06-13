@@ -1,3 +1,4 @@
+import { Button } from 'primereact/button';
 import { useState } from 'react';
 
 function TodoForm({ HandleAddTodo }) {
@@ -23,9 +24,8 @@ function TodoForm({ HandleAddTodo }) {
             />
           </div>
           <div className="col-2">
-            <button type="submit" className="btn btn-success w-100">
-              Add
-            </button>
+            <Button type="submit" label="Add" className="btn btn-success w-100" />
+            {/* <button className="btn btn-success w-100">Add</button> */}
           </div>
         </div>
       </form>

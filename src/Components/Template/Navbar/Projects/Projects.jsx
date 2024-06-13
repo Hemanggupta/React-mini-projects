@@ -1,8 +1,12 @@
 import { useState } from 'react';
-import { projectList } from './Projects.js';
-import styles from './Projects.module.css';
+import { projectList } from '../../../../assets/data/Projects.js';
+import './Projects.css';
 
-const Projects = ({ handleActiveProject }) => {
+import { Card } from 'primereact/card';
+
+import { ListBox } from 'primereact/listbox';
+
+const Projects = ({ activeProjectId, handleActiveProject }) => {
   const [projects, useProjects] = useState(projectList);
 
   const HandleActive = id => {
@@ -18,20 +22,16 @@ const Projects = ({ handleActiveProject }) => {
 
   return (
     <>
-      <div className={`${styles['project-list-container']} shadow`}>
-        <ul className={`${styles['project-list']} list-group `}>
-          {projects.length &&
-            projects.map(project => (
-              <li
-                onClick={() => HandleActive(project.id)}
-                className={`${styles['project-list-item']} list-group-item ${project.isActive ? 'active' : null}`}
-                key={project.id}
-              >
-                {project.name}
-              </li>
-            ))}
-        </ul>
-      </div>
+      <Card>
+        <ListBox
+          value={activeProjectId}
+          onChange={e => HandleActive(e.value)}
+          options={projects}
+          optionLabel="name"
+          optionValue="id"
+          className="w-full md:w-14rem project-list"
+        />
+      </Card>
     </>
   );
 };

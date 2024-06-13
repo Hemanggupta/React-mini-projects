@@ -1,0 +1,9 @@
+.project-list-container {
+  padding: 15px 5px;
+}
+
+.project-list {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 183px);
+}

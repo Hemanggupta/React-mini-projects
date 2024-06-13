@@ -1,5 +1,8 @@
 import Todo from '../../Pages/Todo/Todo';
 import './Content.css';
+
+import { Card } from 'primereact/card';
+
 const Content = ({ activeProjectId }) => {
   const renderProject = () => {
     switch (activeProjectId) {
@@ -12,9 +15,7 @@ const Content = ({ activeProjectId }) => {
   };
   return (
     <>
-      <div className="container my-3 ">
-        <div className="content-body shadow p-3">{renderProject()}</div>
-      </div>
+      <Card className="content-body p-5 me-3 my-3">{renderProject()}</Card>
     </>
   );
 };
