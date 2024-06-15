@@ -3,6 +3,13 @@
   --nav-width: 280px;
   --clr-nav: #778da9;
   --clr-intro-bg: #ffffff;
-  --transition: 0.3s all ease;
   --card-border-radius: 15px;
+}
+
+body.light-mode {
+  --clr-body-bg: #fdf8f8 !important;
+}
+
+body.dark-mode {
+  --clr-body-bg: #111827;
 }

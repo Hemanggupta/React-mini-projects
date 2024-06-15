@@ -7,8 +7,15 @@
   justify-content: space-between;
   word-break: break-all;
   border: none;
-  background-color: #fdfffc;
+  background-color: var(--highlight-bg);
+  color: var(--text-color);
+  border-radius: 8px;
 }
+
+.todo-list-item:hover {
+  /* background-color: var(--surface-hover); */
+}
+
 .action-btns {
   flex: 1;
 }
@@ -16,4 +23,7 @@
 .action-btns em {
   font-size: 20px;
   margin: 0 10px;
+}
+.todo-items {
+  width: 90%;
 }

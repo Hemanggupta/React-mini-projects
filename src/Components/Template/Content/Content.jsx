@@ -1,4 +1,4 @@
-import Todo from '../../Pages/Todo/Todo';
+import Todo from '../../Projects/Todo/Todo';
 import './Content.css';
 
 import { Card } from 'primereact/card';

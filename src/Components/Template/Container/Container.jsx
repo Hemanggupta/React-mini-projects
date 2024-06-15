@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Content from '../Content/Content';
 import Navbar from '../Navbar/Navbar.jsx';
-import TopNav from '../TopNav/TopNav.jsx';
 import './Container.css';
 
 const Container = () => {
@@ -14,7 +13,7 @@ const Container = () => {
           <Navbar activeProjectId={activeProjectId} handleActiveProject={handleActiveProject} />
         </div>
         <div className="content-container">
-          <TopNav className="top-nav" activeProjectId={activeProjectId} />
+          {/* <TopNav className="top-nav" activeProjectId={activeProjectId} /> */}
           <Content activeProjectId={activeProjectId} />
         </div>
       </section>

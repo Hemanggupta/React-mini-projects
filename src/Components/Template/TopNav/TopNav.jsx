@@ -5,8 +5,26 @@ import { ToggleButton } from 'primereact/togglebutton';
 import { useState } from 'react';
 import './TopNav.css';
 
+const THEME = {
+  dark: '/src/themes/DarkMode.css',
+  light: '/src/themes/LightMode.css'
+};
 const TopNav = ({ activeProjectId }) => {
   const [checked, setChecked] = useState(false);
+
+  const setTheme = isLightMode => {
+    console.log(isLightMode);
+    const currentThemeLink = document.getElementById('app-theme');
+    const body = document.body;
+    if (isLightMode) {
+      currentThemeLink.href = THEME.light;
+    } else {
+      currentThemeLink.href = THEME.dark;
+    }
+    body.classList.toggle('light-mode');
+    body.classList.toggle('dark-mode');
+    setChecked(isLightMode);
+  };
 
   const getProjectName = () => {
     return projectList.find(project => project.id === activeProjectId).name;
@@ -24,7 +42,7 @@ const TopNav = ({ activeProjectId }) => {
               onIcon="pi pi-sun"
               offIcon="pi pi-moon"
               checked={checked}
-              onChange={e => setChecked(e.value)}
+              onChange={e => setTheme(e.value)}
               className="w-9rem"
             />
           </div>

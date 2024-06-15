@@ -1,4 +1,4 @@
 .content-body {
-  height: calc(100vh - 110px);
+  height: calc(100vh - 35px);
   overflow-y: auto;
 }
