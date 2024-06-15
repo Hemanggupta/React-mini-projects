@@ -1,4 +1,5 @@
 import Todo from '../../Projects/Todo/Todo';
+import UseEffectDemo from '../../Projects/UseEffectDemo/UseEffectDemo';
 import './Content.css';
 
 import { Card } from 'primereact/card';
@@ -8,6 +9,8 @@ const Content = ({ activeProjectId }) => {
     switch (activeProjectId) {
       case 1:
         return <Todo />;
+      case 2:
+        return <UseEffectDemo />;
 
       default:
         break;

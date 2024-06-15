@@ -1,0 +1,10 @@
+.user-card {
+  color: var(--text-color);
+  background-color: #171423;
+  border: none;
+}
+
+.user-card:hover {
+  background-color: #1f1a2f;
+  transition: background-color 0.3s ease;
+}
