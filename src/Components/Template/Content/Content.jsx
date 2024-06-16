@@ -1,3 +1,4 @@
+import Reviews from '../../Projects/Reviews/Reviews';
 import Todo from '../../Projects/Todo/Todo';
 import UseEffectDemo from '../../Projects/UseEffectDemo/UseEffectDemo';
 import './Content.css';
@@ -11,6 +12,8 @@ const Content = ({ activeProjectId }) => {
         return <Todo />;
       case 2:
         return <UseEffectDemo />;
+      case 3:
+        return <Reviews />;
 
       default:
         break;
@@ -18,7 +21,7 @@ const Content = ({ activeProjectId }) => {
   };
   return (
     <>
-      <Card className="content-body p-5 me-3 my-3">{renderProject()}</Card>
+      <Card className="content-body p-3 me-3 my-3">{renderProject()}</Card>
     </>
   );
 };

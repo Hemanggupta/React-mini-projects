@@ -1,0 +1,12 @@
+.reviews-slider {
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.prev-next-btn span {
+  border-radius: 12px;
+}
+
+.prev-next-btn span:hover {
+  background-color: var(--primary-color);
+}

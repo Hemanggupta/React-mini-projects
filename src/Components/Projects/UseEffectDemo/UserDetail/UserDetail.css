@@ -1,0 +1,6 @@
+.user-image {
+  width: 220px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 1rem;
+}

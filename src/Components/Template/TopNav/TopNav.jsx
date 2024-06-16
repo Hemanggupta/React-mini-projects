@@ -13,7 +13,6 @@ const TopNav = ({ activeProjectId }) => {
   const [checked, setChecked] = useState(false);
 
   const setTheme = isLightMode => {
-    console.log(isLightMode);
     const currentThemeLink = document.getElementById('app-theme');
     const body = document.body;
     if (isLightMode) {

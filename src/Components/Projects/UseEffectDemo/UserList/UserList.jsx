@@ -1,10 +1,14 @@
 import './User.css';
-const UserList = ({ userData }) => {
+const UserList = ({ userList, setUserName }) => {
   return (
     <>
       <ul className="list-group mx-3 mt-3 ">
-        {userData.map(user => (
-          <li className="list-group-item d-flex align-items-center shadow-sm my-3 rounded user-card" key={user.id}>
+        {userList.map(user => (
+          <li
+            className="list-group-item d-flex align-items-center shadow-sm my-3 rounded user-card"
+            key={user.id}
+            onClick={() => setUserName(user.login)}
+          >
             <img src={user.avatar_url} alt={user.login} className="rounded-circle" style={{ width: '60px', aspectRatio: '1/1' }} />
             <span className="ms-3 fs-5 fw-bold">{user.login}</span>
           </li>
