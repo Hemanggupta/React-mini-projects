@@ -1,3 +1,4 @@
+import CarouselContainer from '../../Projects/CustomCarousel/CarouselContainer';
 import Reviews from '../../Projects/Reviews/Reviews';
 import Todo from '../../Projects/Todo/Todo';
 import UseEffectDemo from '../../Projects/UseEffectDemo/UseEffectDemo';
@@ -14,6 +15,8 @@ const Content = ({ activeProjectId }) => {
         return <UseEffectDemo />;
       case 3:
         return <Reviews />;
+      case 4:
+        return <CarouselContainer />;
 
       default:
         break;
