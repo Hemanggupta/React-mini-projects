@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import reviews from '../../../assets/data/reviews';
 import ContentHeader from '../../Template/ContentHeader/ContentHeader';
+import reviews from '../../assets/data/reviews';
 import Review from './Review/Review';
 import './Reviews.css';
 function Reviews() {

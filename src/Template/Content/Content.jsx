@@ -1,7 +1,7 @@
-import CarouselContainer from '../../Projects/CustomCarousel/CarouselContainer';
-import Reviews from '../../Projects/Reviews/Reviews';
-import Todo from '../../Projects/Todo/Todo';
-import UseEffectDemo from '../../Projects/UseEffectDemo/UseEffectDemo';
+import CarouselContainer from '../../Components/CustomCarousel/CarouselContainer';
+import Reviews from '../../Components/Reviews/Reviews';
+import Todo from '../../Components/Todo/Todo';
+import UseEffectDemo from '../../Components/UseEffectDemo/UseEffectDemo';
 import './Content.css';
 
 import { Card } from 'primereact/card';

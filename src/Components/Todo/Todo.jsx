@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import ContentHeader from '../../Template/ContentHeader/ContentHeader';
 import './Todo.css';
 import TodoForm from './TodoForm/TodoForm';
@@ -15,6 +16,7 @@ const Todo = () => {
           isCompleted: false
         }
       ]);
+      toast.success('Todo Added successfully');
     }
   };
 

@@ -1,4 +1,4 @@
-import logo from '../../../../assets/my-logo.png';
+import logo from '../../../assets/my-logo.png';
 import './Intro.css';
 
 import { Card } from 'primereact/card';

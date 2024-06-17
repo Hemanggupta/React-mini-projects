@@ -1,4 +1,4 @@
-import { list } from '../../../assets/data/carousel.data.js';
+import { list } from '../../assets/data/carousel.data.js';
 import ContentHeader from '../../Template/ContentHeader/ContentHeader.jsx';
 import Carousel from './Carousel/Carousel.jsx';
 

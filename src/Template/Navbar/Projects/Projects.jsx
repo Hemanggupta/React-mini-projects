@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { projectList } from '../../../../assets/data/Projects.js';
+import { projectList } from '../../../assets/data/Projects.js';
 import './Projects.css';
 
 import { Card } from 'primereact/card';
@@ -10,13 +10,19 @@ const Projects = ({ activeProjectId, handleActiveProject }) => {
   const [projects, useProjects] = useState(projectList);
 
   const HandleActive = id => {
-    const allProjects = projects.map(project => {
-      if (project.id === id) {
-        return { ...project, isActive: true };
-      }
-      return { ...project, isActive: false };
-    });
-    handleActiveProject(id);
+    let allProjects = [];
+    console.log(id);
+    if (id) {
+      allProjects = projects.map(project => {
+        if (project.id === id) {
+          return { ...project, isActive: true };
+        }
+        return { ...project, isActive: false };
+      });
+      handleActiveProject(id);
+    } else {
+      allProjects = [...projects];
+    }
     return useProjects(allProjects);
   };
 

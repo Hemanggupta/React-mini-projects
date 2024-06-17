@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { projectList } from '../../../assets/data/Projects.js';
-import Content from '../Content/Content';
+import { projectList } from '../../assets/data/Projects.js';
+import Content from '..//Content/Content.jsx';
 import Navbar from '../Navbar/Navbar.jsx';
 import './Container.css';
 const Container = () => {

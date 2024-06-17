@@ -1,7 +1,10 @@
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './TodoList.css';
 function TodoList({ todos, handleTodos }) {
   const HandleRemoveTodo = index => {
     todos.splice(index, 1);
+    toast.success('Todo removed successfully');
     handleTodos([...todos]);
   };
 
