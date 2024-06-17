@@ -1,3 +1,4 @@
+import ColorPalette from '../../Components/ColorPalette/ColorPalette';
 import CarouselContainer from '../../Components/CustomCarousel/CarouselContainer';
 import Reviews from '../../Components/Reviews/Reviews';
 import Todo from '../../Components/Todo/Todo';
@@ -17,6 +18,8 @@ const Content = ({ activeProjectId }) => {
         return <Reviews />;
       case 4:
         return <CarouselContainer />;
+      case 5:
+        return <ColorPalette />;
 
       default:
         break;
