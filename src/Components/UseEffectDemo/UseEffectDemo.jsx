@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import ContentHeader from '../../Template/ContentHeader/ContentHeader';
-import UserDetail from './UserDetail/UserDetail';
-import UserList from './UserList/UserList';
+import { UserDetail, UserList } from './index';
 
 const UseEffectDemo = () => {
   const url = 'https://api.github.com/users';

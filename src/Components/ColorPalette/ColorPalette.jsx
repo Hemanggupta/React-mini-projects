@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import Values from 'values.js';
-import PaletteForm from './PaletteForm/PaletteForm';
-import Palettes from './Palettes/Palettes';
+
+import { PaletteForm, Palettes } from '../ColorPalette';
+
 function ColorPalette() {
   const [color, setColor] = useState('#1500ff');
   const [colorPalettes, setColorPalettes] = useState([]);

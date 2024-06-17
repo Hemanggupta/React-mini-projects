@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import ContentHeader from '../../Template/ContentHeader/ContentHeader';
 import './Todo.css';
-import TodoForm from './TodoForm/TodoForm';
-import TodoList from './TodoList/TodoList';
+import { TodoForm, TodoList } from './index';
 const Todo = () => {
   const [todos, handleTodos] = useState([]);
 
