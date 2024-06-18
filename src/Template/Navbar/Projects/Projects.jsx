@@ -3,7 +3,6 @@ import { projectList } from '../../../assets/data/Projects.js';
 import './Projects.css';
 
 import { Card } from 'primereact/card';
-
 import { ListBox } from 'primereact/listbox';
 
 const Projects = ({ activeProjectId, handleActiveProject }) => {
@@ -11,7 +10,6 @@ const Projects = ({ activeProjectId, handleActiveProject }) => {
 
   const HandleActive = id => {
     let allProjects = [];
-    console.log(id);
     if (id) {
       allProjects = projects.map(project => {
         if (project.id === id) {

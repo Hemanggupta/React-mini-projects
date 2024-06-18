@@ -11,3 +11,9 @@
 .p-listbox {
   transition: none;
 }
+
+@media screen and (max-width: 768px) {
+  .project-list {
+    height: 80vh;
+  }
+}

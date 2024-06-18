@@ -27,6 +27,7 @@
 
 .review-card .card-subtitle {
   text-transform: capitalize;
+  color: rgb(137, 153, 153);
 }
 
 .review-card .card-body {

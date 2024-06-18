@@ -27,7 +27,7 @@ const Content = ({ activeProjectId }) => {
   };
   return (
     <>
-      <Card className="content-body p-3 me-3 my-3">{renderProject()}</Card>
+      <Card className="content-body p-md-3 me-md-3 my-md-3">{renderProject()}</Card>
     </>
   );
 };

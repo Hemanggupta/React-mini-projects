@@ -14,7 +14,6 @@ function ColorPalette() {
       const colors = new Values(color).all(10);
       colors.reverse();
       setColorPalettes(colors);
-      console.log(colors);
     } catch (error) {
       toast.error(error.message);
       setColorPalettes([]);

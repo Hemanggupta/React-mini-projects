@@ -35,7 +35,7 @@ function UserDetail({ userName, url, setUserName }) {
 
   return (
     <>
-      <span className="pi pi-times  p-3 pointer" onClick={() => setUserName(null)}></span>
+      <span className="pi pi-times text-dark rounded-circle mt-5 bg-light p-3 pointer" onClick={() => setUserName(null)}></span>
 
       <div className="row flex-column">
         <div className="col">

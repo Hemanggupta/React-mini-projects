@@ -267,7 +267,7 @@ body {
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 /* Track */
@@ -294,4 +294,10 @@ body {
 
 .pointer {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
 }

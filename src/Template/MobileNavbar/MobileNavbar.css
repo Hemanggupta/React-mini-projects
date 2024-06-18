@@ -1,0 +1,21 @@
+.mobile-nav {
+  width: 100vw;
+  border-radius: 0;
+  height: 100%;
+}
+
+.mobile-nav .p-card-body {
+  height: 100%;
+  /* padding: 0 !important; */
+  display: flex;
+}
+.mobile-nav .p-card-body .p-card-content {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.mobile-nav .mobile-logo {
+  width: 45px;
+}
+

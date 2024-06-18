@@ -2,6 +2,10 @@
   text-align: left;
 }
 
+.todo{
+  line-height: 22px;
+}
+
 .todo-list-item {
   display: flex;
   justify-content: space-between;

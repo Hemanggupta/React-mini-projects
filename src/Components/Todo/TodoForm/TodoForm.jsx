@@ -17,7 +17,7 @@ function TodoForm({ HandleAddTodo }) {
           <div className="col-8">
             <InputText value={todoValue} style={{ width: '100%' }} onChange={e => handleTodoValue(e.target.value)} />
           </div>
-          <div className="col-2">
+          <div className="col-md-2 col-4">
             <Button type="submit" label="Add" className="btn btn-success w-100" style={{ minWidth: '100px' }} />
           </div>
         </div>

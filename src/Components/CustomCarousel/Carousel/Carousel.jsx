@@ -13,7 +13,7 @@ function Carousel({ list }) {
       const interval = setInterval(() => {
         setActiveItemIndex(prevIndex => {
           const newIndex = (prevIndex + 1) % list.length;
-          console.log(newIndex, new Date().getSeconds());
+          // console.log(newIndex, new Date().getSeconds());
           return newIndex;
         });
       }, 5000);

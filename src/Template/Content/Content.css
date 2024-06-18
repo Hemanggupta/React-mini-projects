@@ -2,3 +2,12 @@
   height: calc(100vh - 35px);
   overflow-y: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .content-body {
+    max-width: 95vw;
+    width: 95vw;
+    height: 100%;
+    margin: 65px 0 0 0 !important;
+  }
+}
