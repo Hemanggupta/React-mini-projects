@@ -1,12 +1,12 @@
 .navbar-container {
   width: var(--nav-width);
-  height: 100vh;
+  height: 100dvh;
   background-color: var(--clr-nav-bg);
 }
 
 .content-container {
   width: calc(100vw - var(--nav-width));
-  height: 100vh;
+  height: 100dvh;
   background-color: var(--clr-content-bg);
 }
 
@@ -34,7 +34,7 @@
 
   .content-container {
     width: 100%;
-    height: calc(100vh - 75px);
+    height: calc(100dvh - 75px);
   }
 
   .lg-nav-container {

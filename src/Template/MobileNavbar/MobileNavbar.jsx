@@ -53,7 +53,7 @@ function MobileNavbar({ activeProjectId, handleActiveProject }) {
           if (!visible) return;
           setVisible(false);
         }}
-        style={{ width: '15rem', height: '100vh' }}
+        style={{ width: '15rem', height: '100dvh' }}
       >
         <ListBox
           value={activeProjectId}

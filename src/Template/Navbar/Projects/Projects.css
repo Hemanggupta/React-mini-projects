@@ -5,7 +5,7 @@
 .project-list {
   overflow-x: hidden;
   overflow-y: auto;
-  height: calc(100vh - 169px);
+  height: calc(100dvh - 169px);
 }
 
 .p-listbox {

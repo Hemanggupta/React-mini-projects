@@ -45,7 +45,7 @@ function Reviews() {
     <>
       <center>
         <ContentHeader title="Reviews" />
-        <div className="p-5 bg-dark card mt-2">
+        <div className="p-md-5 p-2 bg-dark card mt-2">
           <div className="row reviews-slider flex-column align-items-center">
             <div className="col">
               <Review review={review} />

@@ -76,3 +76,14 @@
 .carousel-container .prev {
   left: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    max-width: 90dvw;
+    width: 90dvw;
+  }
+
+  .carousel-container .quote {
+    max-width: 70dvw;
+  }
+}
