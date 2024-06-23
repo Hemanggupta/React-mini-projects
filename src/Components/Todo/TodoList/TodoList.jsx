@@ -1,11 +1,13 @@
+import { Checkbox } from 'primereact/checkbox';
+import { Tooltip } from 'primereact/tooltip';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './TodoList.css';
-function TodoList({ todos, handleTodos }) {
+function TodoList({ todos, updateList }) {
   const HandleRemoveTodo = index => {
     todos.splice(index, 1);
+    updateList([...todos]);
     toast.success('Todo removed successfully');
-    handleTodos([...todos]);
   };
 
   const HandleCompleteToggle = index => {
@@ -13,19 +15,27 @@ function TodoList({ todos, handleTodos }) {
     todos.sort((a, b) => {
       return a.isCompleted - b.isCompleted;
     });
-    handleTodos([...todos]);
+    updateList([...todos]);
   };
 
   return (
     <>
+      <Tooltip target=".fa-trash" />
       <ul className="list-group mx-3 mt-3 todo-list">
         {todos.map((todo, index) => (
-          <li className="list-group-item row px-0 align-items-center shadow-sm my-3 todo-list-item" key={index}>
-            <span className={`todo col-10 ${todo.isCompleted && 'text-decoration-line-through'}`}>{todo.name}</span>
-            <span className="action-btns col-2 p-0 d-flex justify-content-end">
-              <em className="text-success cursor-pointer fa-solid fa-square-check" onClick={() => HandleCompleteToggle(index)}></em>
-              <em className="text-danger cursor-pointer fa-solid fa-trash" onClick={() => HandleRemoveTodo(index)}></em>
+          <li className="list-group-item row px-0 align-items-center shadow-sm my-2 todo-list-item" key={index}>
+            <span className="col-1">
+              <Checkbox checked={todo.isCompleted} onChange={() => HandleCompleteToggle(index)} />
             </span>
+            <span className={`todo col-10 ${todo.isCompleted && 'text-decoration-line-through'}`}>{todo.name}</span>
+            <em
+              className="col-1 text-danger cursor-pointer p-0 fa-solid fa-trash text-center"
+              onClick={() => HandleRemoveTodo(index)}
+              data-pr-tooltip="Remove"
+              data-pr-position="left"
+              role="button"
+              tabIndex="0"
+            ></em>
           </li>
         ))}
       </ul>

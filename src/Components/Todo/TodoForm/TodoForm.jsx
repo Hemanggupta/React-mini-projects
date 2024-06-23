@@ -14,7 +14,7 @@ function TodoForm({ HandleAddTodo }) {
     <>
       <form onSubmit={event => handleOnSubmit(event)}>
         <div className="mt-5 input-form row justify-content-center align-items-center">
-          <div className="col-8">
+          <div className="col-8 p-2 p-md-0">
             <InputText value={todoValue} style={{ width: '100%' }} onChange={e => handleTodoValue(e.target.value)} />
           </div>
           <div className="col-md-2 col-4">
