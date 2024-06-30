@@ -1,0 +1,25 @@
+.u-box {
+  height: 90px;
+  aspect-ratio: 1/1;
+  border: 2px solid black;
+  padding: 50px;
+}
+
+.u-box.visible {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.u-box.hidden {
+  visibility: hidden;
+  cursor: initial;
+}
+
+.u-box.transparent-bg {
+  background-color: transparent;
+}
+
+.u-box.green-bg {
+  background-color: #0bcc59;
+  cursor: no-drop;
+}

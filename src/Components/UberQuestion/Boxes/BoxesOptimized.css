@@ -1,0 +1,24 @@
+.uber-box {
+  height: 100px;
+  aspect-ratio: 1/1;
+  border: 2px solid #000;
+}
+
+.uber-box.visible {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.uber-box.hidden {
+  visibility: hidden;
+  cursor: default;
+}
+
+.uber-box.selected {
+  background-color: #0bcc56;
+  cursor: no-drop;
+}
+
+.uber-box.unloading {
+  cursor: no-drop;
+}
