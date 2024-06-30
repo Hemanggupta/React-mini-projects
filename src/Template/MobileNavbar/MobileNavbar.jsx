@@ -2,10 +2,12 @@ import { Card } from 'primereact/card';
 import { ListBox } from 'primereact/listbox';
 import { Sidebar } from 'primereact/sidebar';
 import { useState } from 'react';
-import { projectList } from '../../assets/data/Projects.js';
+import { projectList } from '../../assets/data/Projects.jsx';
 import logo from '../../assets/my-logo.png';
+import useProjectContext from '../Container/index.js';
 import './MobileNavbar.css';
-function MobileNavbar({ activeProjectId, handleActiveProject }) {
+function MobileNavbar() {
+  const { activeProject, handleActiveProject } = useProjectContext();
   const [visible, setVisible] = useState(false);
   const DialogSettings = {
     header: 'Projects',
@@ -25,7 +27,8 @@ function MobileNavbar({ activeProjectId, handleActiveProject }) {
         }
         return { ...project, isActive: false };
       });
-      handleActiveProject(id);
+      const newActiveProject = allProjects.find(project => project.id === id);
+      handleActiveProject(newActiveProject);
     } else {
       allProjects = [...projects];
     }
@@ -56,7 +59,7 @@ function MobileNavbar({ activeProjectId, handleActiveProject }) {
         style={{ width: '15rem', height: '100dvh' }}
       >
         <ListBox
-          value={activeProjectId}
+          value={activeProject.id}
           onChange={e => HandleActive(e.value)}
           options={projects}
           optionLabel="name"

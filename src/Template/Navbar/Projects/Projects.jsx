@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { projectList } from '../../../assets/data/Projects.js';
+import { projectList } from '../../../assets/data/Projects.jsx';
 import './Projects.css';
 
 import { Card } from 'primereact/card';
 import { ListBox } from 'primereact/listbox';
+import useProjectContext from '../../Container/index.js';
 
-const Projects = ({ activeProjectId, handleActiveProject }) => {
+const Projects = () => {
   const [projects, useProjects] = useState(projectList);
+  const { activeProject, handleActiveProject } = useProjectContext();
 
   const HandleActive = id => {
     let allProjects = [];
@@ -17,7 +19,8 @@ const Projects = ({ activeProjectId, handleActiveProject }) => {
         }
         return { ...project, isActive: false };
       });
-      handleActiveProject(id);
+      const newActiveProject = allProjects.find(project => project.id === id);
+      handleActiveProject(newActiveProject);
     } else {
       allProjects = [...projects];
     }
@@ -28,7 +31,7 @@ const Projects = ({ activeProjectId, handleActiveProject }) => {
     <>
       <Card>
         <ListBox
-          value={activeProjectId}
+          value={activeProject.id}
           onChange={e => HandleActive(e.value)}
           options={projects}
           optionLabel="name"

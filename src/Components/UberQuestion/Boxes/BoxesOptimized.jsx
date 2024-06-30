@@ -57,6 +57,7 @@ function BoxesOptimized({ boxMatrix }) {
                 return (
                   <div
                     key={boxCoordinate}
+                    role="button"
                     data-key={boxCoordinate}
                     data-status={box ? 'visible' : 'hidden'}
                     className={`uber-box ${box ? 'visible' : 'hidden'} ${isSelected ? 'selected' : ''} ${
